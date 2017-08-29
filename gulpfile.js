@@ -19,6 +19,7 @@ gulp.task('scripts', function () {
     return gulp.src([
         'app/libs/jquery/jquery.min.js',
         'app/libs/tether/tether.min.js',
+        'app/libs/popper/popper.min.js',
         'app/libs/bootstrap/bootstrap.min.js',
         'app/libs/waypoints/jquery.waypoints.min.js',
         'app/libs/parallax/parallax.min.js',
