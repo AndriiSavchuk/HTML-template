@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Andrii S",
+  "author": "Andrii Savchuk",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.8",
@@ -25,7 +25,5 @@
     "node-bourbon": "^4.2.8",
     "vinyl-ftp": "^0.6.0"
   },
-  "dependencies": {
-    "popper.js": "^1.12.4"
-  }
+  "dependencies": {}
 }
