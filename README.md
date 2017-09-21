@@ -1,1 +1,1 @@
-# HTML template (change to "Project name")
+# HTML Template For New Projects

@@ -2,46 +2,53 @@
 @import "libs"
 @import "vars"
 
-/* Base styles of the project */
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
 
 *::-webkit-input-placeholder
-    color: #666
-    opacity: 1
+	color: #666
+	opacity: 1
 
 *:-moz-placeholder
-    color: #666
-    opacity: 1
+	color: #666
+	opacity: 1
 
 *::-moz-placeholder
-    color: #666
-    opacity: 1
+	color: #666
+	opacity: 1
 
 *:-ms-input-placeholder
-    color: #666
-    opacity: 1
+	color: #666
+	opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-    color: #666
+	color: #666
 body input:required:valid,
 body textarea:required:valid
-    color: #666
+	color: #666
 
 html, body
-    height: 100%
+	height: 100%
 
 body
-    position: relative
-    min-width: 320px
-    line-height: $lh-default
-    font-family: $ff-regular
-    font-size: 16px
-    background-color: $bg-color
-    color: $txt-color
-    overflow-x: hidden
-    opacity: 1
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
+  position: relative
+  min-width: 320px
+  line-height: $lh-default
+  font-family: $default-font
+  font-size: 16px
+  background-color: $bg-color
+  color: $txt-color
+  overflow-x: hidden
+  opacity: 1
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
 
 
 //.container
@@ -60,18 +67,17 @@ body
 /* Headings */
 
 h1, h2, h3, h4, h5, h6
-    margin: 0
-    font-family: $ff-regular
+  margin: 0
 
 
 /* Links */
 
 a
-    color: $link-color
+  color: $link-color
+  text-decoration: none
+  &:hover
     text-decoration: none
-    &:hover
-        text-decoration: none
-        color: darken($link-color, 10%)
+    color: darken($link-color, 10%)
 
 
 /* Form inputs */
@@ -85,76 +91,66 @@ input[type='url'],
 input[type='file'],
 input[type='password'],
 textarea
-    padding: 8px
-    margin-bottom: 15px
-    color: $txt-color
-    font-size: 16px
-    background: #fff
-    border: 2px solid $brd-color
-    border-radius: 4px
-    +placeholder
-        color: #727272
-        font-size: 16px
-    &:focus
-        outline: none
-        box-shadow: none
-        border-color: darken($brd-color, 10%)
+  padding: 8px
+  margin-bottom: 15px
+  color: $txt-color
+  font-size: 16px
+  background: #fff
+  border: 2px solid $brd-color
+  border-radius: 4px
+  &:focus
+    outline: none
+    box-shadow: none
+    border-color: darken($brd-color, 10%)
 
 textarea
-    height: auto
-    resize: none
-    min-height: 100px
+  height: auto
+  resize: none
+  min-height: 100px
 
 
 /* Buttons */
 
 .btn, a.btn
-    cursor: pointer
-    display: inline-block
-    border: none
-    color: #fff
+  cursor: pointer
+  display: inline-block
+  border: none
+  color: #fff
+  text-decoration: none
+  background-color: $btn-color
+  padding: 15px 45px
+  font-size: 14px
+  text-transform: uppercase
+  font-weight: 600
+  letter-spacing: 3px
+  border-radius: 2px
+  text-align: center
+  position: relative
+  outline: none
+  transition: background-color .1s ease
+  &::after
+    transition: background-color .2s ease
+    position: absolute
+    content: ''
+    height: 4px
+    bottom: 0
+    width: 100%
+    background-color: darken($btn-color, 50%)
+    opacity: .18
+    border-bottom-left-radius: 2px
+    border-bottom-right-radius: 2px
+    left: 0
+  &:focus, &:hover
     text-decoration: none
-    background-color: $btn-color
-    padding: 15px 45px
-    font-size: 14px
-    text-transform: uppercase
-    font-weight: 600
-    letter-spacing: 3px
-    border-radius: 2px
-    text-align: center
-    position: relative
-    outline: none
-    transition: background-color .1s ease
+    color: #fff
+  &:hover
+    background-color: lighten($btn-color, 5%)
     &::after
-        transition: background-color .2s ease
-        position: absolute
-        content: ''
-        height: 4px
-        bottom: 0
-        width: 100%
-        background-color: darken($btn-color, 50%)
-        opacity: .18
-        border-bottom-left-radius: 2px
-        border-bottom-right-radius: 2px
-        left: 0
-    &:focus, &:hover
-        text-decoration: none
-        color: #fff
-    &:hover
-        background-color: lighten($btn-color, 5%)
-        &::after
-            opacity: .22
-    &:active
-        background-color: darken($btn-color, 5%)
-        &::after
-            opacity: .32
-
-/* Icons */
-
-.ic
-    position: relative
-    display: inline-block
-    vertical-align: middle
+      opacity: .22
+  &:active
+    background-color: darken($btn-color, 5%)
+    &::after
+      opacity: .32
 
 
 /* Floats */
@@ -165,13 +161,18 @@ textarea
     float: right
 
 
-/* Text align*/
+/* Text align (If Don't using Bootstrap) */
 
-.text-center
-    text-align: center !important
-.text-left
-    text-align: left !important
-.text-right
-    text-align: right !important
+// .text-center
+//     text-align: center !important
+// .text-left
+//     text-align: left !important
+// .text-right
+//     text-align: right !important
 
-/*----------------------------*/
+/* Img styles for responsivness (If Don't using Bootstrap) */
+
+// .img-responsive
+// 	display: block
+// 	max-width: 100%
+// 	height: auto
