@@ -26,16 +26,3 @@
 	@if $direction == bl
 		border-width: $height + px 0 0 $width + px
 		border-color: transparent transparent transparent $bg
-
-=clr
-	&:after
-		content: ' '
-		display: table
-		clear: both
-	*zoom: 1
-
-=tr($var)
-	-webkit-transition: $var
-	-moz-transition: $var
-	-o-transition: $var
-	transition: $var
