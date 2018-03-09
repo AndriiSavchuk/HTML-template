@@ -1,1 +1,1 @@
-# HTML Template For New Projects
+# HTML Template

@@ -15,6 +15,7 @@
 
 # dependencies
 /node_modules
+/app/libs
 
 # IDEs and editors
 /.idea
